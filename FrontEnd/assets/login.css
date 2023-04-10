@@ -4,7 +4,7 @@ body {
 }
 
 footer {
-	background-color: white;
+	background-color: rgb(143, 92, 92);
 }
 
 html, body, span, h1, h2, p,
@@ -28,9 +28,12 @@ body {
 ul {
 	list-style: none;
 }
+header a {
+	text-decoration: none;
+}
 
 /** end reset css**/
-body {
+html {
 	max-width: 1140px;
 	margin:auto;
 	font-family: 'Work Sans' ;
@@ -39,13 +42,13 @@ body {
 header {
 	display: flex;
 	justify-content: space-between;
-	margin: 50px 0
+	margin: 50px 0;
 }
 section {
-	margin: 50px 0
+	margin: 50px 0;
 }
 
-h1{
+h1 a {
 	display: flex;
 	flex-direction: column;
 	font-family: 'Syne';
@@ -54,11 +57,10 @@ h1{
 	color: #B1663C
 }
 
-h1 > span {
+h1 a > span {
 	font-family: 'Work Sans';
 	font-size:10px;
 	letter-spacing: 0.1em;
-;
 }
 
 h2{
@@ -74,31 +76,33 @@ nav ul {
 
 }
 nav li {
-	padding: 0 10px;
-	font-family: 'Work Sans';
-	font-style: normal;
-	font-weight:400;
+	padding-left: 40px;
 	font-size: 16px;
-	line-height: 19px;
+	font-weight: 400;
+}
+nav li a {
+	color: black;
 }
 
 li:hover {
 	color: #B1663C;
 }
-
-li span {
-	font-weight: 900;
-}
-
-li img {
-	width: 19.36px;
+nav img {
 	height: 19.36px;
+	width: 19.36px;
 }
 
 #loginform {
 	width: 50%;
-margin: auto;
+	margin: auto;
 }
+
+main {
+	min-height: 100%;
+	position: relative;
+	padding-bottom: 100px;
+}
+
 #loginform > * {
 	text-align: center;
 
@@ -107,10 +111,16 @@ margin: auto;
 	margin-bottom: 20px;
 }
 #loginform form {
-	text-align: left;
 	margin-top:30px;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	text-align: left;
+}
+
+#loginform form label {
+	display: flex;
+	align-items: flex-end;
 }
 
 #loginform input {
@@ -121,6 +131,11 @@ margin: auto;
 }
 #loginform label {
 	margin: 2em 0 1em 0;
+}
+
+#email, #password {
+	width: 379px;
+	height: 51px;
 }
 
 input[type="submit"]{
@@ -134,9 +149,28 @@ input[type="submit"]{
 	border-radius: 60px ;
 }
 
-footer nav ul {
+footer {
+	position: absolute;
+	width: 100%;
 	display: flex;
-	justify-content: flex-end;
-	margin: 2em
+	align-items: center;
+	justify-content: center;
+	text-align: left;
+	height: 60px;
+	bottom: 0;
+}
+
+
+footer li {
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 100;
+	font-size: 14px;
+	line-height: 16px;
+	
+}
+
+footer li a {
+	text-decoration: none;
 }
 
